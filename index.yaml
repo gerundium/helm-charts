@@ -1,0 +1,20 @@
+apiVersion: v1
+entries:
+  homer:
+  - apiVersion: v2
+    appVersion: 23.10.1
+    created: "2023-11-29T17:03:33.224181305+01:00"
+    description: A Homer Helm chart for Kunbernetes.
+    digest: 30bd25b6b33963f20ac3c9811c93014103f540018ef05d040fdbb0616ed5b387
+    home: https://github.com/djjudas21/charts/tree/master/charts/homer
+    maintainers:
+    - email: gerundium@users.noreply.github.com
+      name: gerundium
+    name: homer
+    sources:
+    - https://github.com/bastienwirtz/homer
+    type: application
+    urls:
+    - packages/homer-0.1.1.tgz
+    version: 0.1.1
+generated: "2023-11-29T17:03:33.221270043+01:00"
