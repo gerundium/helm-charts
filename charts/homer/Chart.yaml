@@ -6,7 +6,7 @@ type: application
 version: 0.1.1
 sources:
   - https://github.com/bastienwirtz/homer
-home: https://github.com/djjudas21/charts/tree/master/charts/homer
+home: https://github.com/gerundium/helm-charts/tree/main/charts/homer
 maintainers:
   - name: gerundium
     email: gerundium@users.noreply.github.com
