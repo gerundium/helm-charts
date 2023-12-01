@@ -3,7 +3,23 @@ entries:
   homer:
   - apiVersion: v2
     appVersion: 23.10.1
-    created: "2023-11-29T17:11:42.942662775+01:00"
+    created: "2023-12-01T07:59:06.268142431+01:00"
+    description: A Homer Helm chart for Kubernetes.
+    digest: 6cdc4b63f0af0f545ae58f09ee21dd300c3265c9c390f9f0f3ec637b1eefba3f
+    home: https://github.com/gerundium/helm-charts/tree/main/charts/homer
+    maintainers:
+    - email: gerundium@users.noreply.github.com
+      name: gerundium
+    name: homer
+    sources:
+    - https://github.com/bastienwirtz/homer
+    type: application
+    urls:
+    - packages/homer-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 23.10.1
+    created: "2023-12-01T07:59:06.267066584+01:00"
     description: A Homer Helm chart for Kunbernetes.
     digest: 30bd25b6b33963f20ac3c9811c93014103f540018ef05d040fdbb0616ed5b387
     home: https://github.com/djjudas21/charts/tree/master/charts/homer
@@ -17,4 +33,4 @@ entries:
     urls:
     - packages/homer-0.1.1.tgz
     version: 0.1.1
-generated: "2023-11-29T17:11:42.941084034+01:00"
+generated: "2023-12-01T07:59:06.265623798+01:00"
