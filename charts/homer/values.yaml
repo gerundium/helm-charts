@@ -25,21 +25,20 @@ serviceAccount:
 podAnnotations: {}
 
 podSecurityContext: {}
-  # fsGroup: 2000
+#  # -- Specify the user ID the application will run as
+#  runAsUser: 1000
+#  # -- Enable validation that the container must run as non-root user
+#  runAsNonRoot: true
+#  # -- Specify the group ID the application will run as
+#  runAsGroup: 1000
+#  allowPrivilegeEscalation: false
+#  capabilities:
+#    drop:
+#      - ALL
+#  seccompProfile:
+#    type: "RuntimeDefault"
 
-securityContext:
-  # -- Specify the user ID the application will run as
-  runAsUser: 1000
-  # -- Enable validation that the container must run as non-root user
-  runAsNonRoot: true
-  # -- Specify the group ID the application will run as
-  runAsGroup: 1000
-  allowPrivilegeEscalation: false
-  capabilities:
-    drop:
-      - ALL
-  seccompProfile:
-    type: "RuntimeDefault"
+securityContext: {}
 
 service:
   type: ClusterIP
@@ -86,11 +85,9 @@ tolerations: []
 
 affinity: {}
 
-persistence:
-  storageClass: ""
-  mountPath: "/www/assets"
-  accessMode: ReadWriteOnce
-  size: 1Gi
+persistence: {}
+#  enabled: true
+#  name: homer-data
 
 env:
   # -- Set the container timezone

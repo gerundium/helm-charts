@@ -51,18 +51,22 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - name: data
-              mountPath: /www/assets
             - name: config
               mountPath: /www/assets/config.yml
               subPath: config.yml
+            {{- if eq .Values.persistence.enabled true }}
+            - name: data
+              mountPath: /www/assets
+            {{- end }}
       volumes:
         - name: config
           configMap:
             name: homer-config
+        {{- if eq .Values.persistence.enabled true }}
         - name: data
           persistentVolumeClaim:
-            claimName: {{ include "homer.fullname" . }}
+            claimName: {{ .Values.persistence.name | quote }}
+        {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}

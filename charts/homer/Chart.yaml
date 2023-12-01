@@ -3,7 +3,7 @@ appVersion: "23.10.1"
 name: homer
 description: A Homer Helm chart for Kunbernetes.
 type: application
-version: 0.1.1
+version: 0.1.2
 sources:
   - https://github.com/bastienwirtz/homer
 home: https://github.com/gerundium/helm-charts/tree/main/charts/homer
