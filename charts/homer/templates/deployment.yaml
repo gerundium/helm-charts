@@ -58,6 +58,10 @@ spec:
             - name: data
               mountPath: /www/assets
             {{- end }}
+            {{- if .Values.extraVolumes }}
+            - name: nfs
+              mountPath: /nfs
+            {{ end }}
       volumes:
         - name: config
           configMap:
@@ -66,6 +70,9 @@ spec:
         - name: data
           persistentVolumeClaim:
             claimName: {{ .Values.persistence.name | quote }}
+        {{- end }}
+        {{- with .Values.extraVolumes }}
+        {{- toYaml . | nindent 8 }}
         {{- end }}
       {{- with .Values.nodeSelector }}
       nodeSelector:

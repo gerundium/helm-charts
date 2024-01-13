@@ -89,6 +89,13 @@ persistence: {}
 #  enabled: true
 #  name: homer-data
 
+extraVolumes:
+#  - name: nfs
+#    nfs:
+#      server: "10.0.0.1"
+#      path: "/nfs"
+#      readOnly: false
+
 env:
   # -- Set the container timezone
   TZ: "UTC"
