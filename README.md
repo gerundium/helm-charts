@@ -27,4 +27,5 @@ helm install <MY-RELEASE-NAME> gerundium/<CHART-NAME> [--values=overrides.yaml]
 
 ```bash
 helm package charts/homer
+helm repo index .
 ```
